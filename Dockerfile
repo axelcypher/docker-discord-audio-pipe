@@ -13,8 +13,9 @@ RUN  dpkg -i snapclient_0.26.0-1_amd64.deb \
   && apt-get -f install -y \
   && rm -rf /var/lib/apt/lists/*
   
-RUN  apt-get upgrade \
-  && apt-get install -y -f \
+RUN  apt-get update \
+  && apt-get upgrade \
+  && apt-get -f install -y \
   git \
   nano \
   python3 \
