@@ -9,7 +9,6 @@ services:
     environment:
       HOST: 10.2.0.25
     volumes:
-      - type: bind
-        source: /home/tpendzialek/discord-audio-pipe/config/token.txt:/app/token.txt
+      - /home/tpendzialek/discord-audio-pipe/config/token.txt:/app/token.txt
         
 
