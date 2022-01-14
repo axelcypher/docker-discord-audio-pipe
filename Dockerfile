@@ -29,7 +29,9 @@ RUN git clone https://github.com/axelcypher/discord-audio-pipe.git \
   && cp -R discord-audio-pipe/* /app \
   && cd /app
 
-RUN python3 -m pip install -U setuptools
+RUN python3 -m pip install -U setuptools \
+  && python3 -m pip install -U pip
+  
 RUN pip3 install -r /app/requirements.txt
   
 RUN /usr/bin/snapclient -v
