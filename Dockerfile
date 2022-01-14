@@ -26,10 +26,10 @@ RUN  apt-get update \
 RUN mkdir /app
 
 RUN git clone https://github.com/axelcypher/discord-audio-pipe.git \
-  && mv discord-audio-pipe /app \
+  && cp -R discord-audio-pipe/* /app \
   && cd /app
   
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /app/requirements.txt
   
 RUN /usr/bin/snapclient -v
 ENTRYPOINT ["/bin/bash","-c","/usr/bin/snapclient -h $HOST"]
