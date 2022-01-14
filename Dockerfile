@@ -21,7 +21,9 @@ RUN  apt-get update \
   python3 \
   python3-pip \
   libportaudio2 \
-  libxcb-xinerama0
+  libxcb-xinerama0 \
+  alsa-utils \
+  alsamixer
 
 RUN mkdir /app
 
