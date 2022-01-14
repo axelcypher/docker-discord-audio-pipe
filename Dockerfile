@@ -26,7 +26,7 @@ RUN  apt-get update \
 RUN mkdir /app
 
 RUN git clone https://github.com/axelcypher/discord-audio-pipe.git \
-  && mv discord-audio-pipe \
+  && mv discord-audio-pipe /app \
   && cd /app
   
 RUN pip3 install -r requirements.txt
