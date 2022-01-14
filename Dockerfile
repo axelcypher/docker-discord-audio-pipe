@@ -29,5 +29,7 @@ RUN git clone https://github.com/axelcypher/discord-audio-pipe.git \
   && mv discord-audio-pipe \
   && cd /app
   
+RUN pip3 install -r requirements.txt
+  
 RUN /usr/bin/snapclient -v
 ENTRYPOINT ["/bin/bash","-c","/usr/bin/snapclient -h $HOST"]
